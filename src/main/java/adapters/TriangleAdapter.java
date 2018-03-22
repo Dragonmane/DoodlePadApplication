@@ -4,65 +4,104 @@ import drawing.IShape;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.TriangleMesh;
+import shapes.Triangle;
 
+/**
+ * This is the adapter class for the Triangle
+ *
+ * @author Ted Ginn
+ * @version 1.0
+ */
 public class TriangleAdapter implements IShape
 {
-    private TriangleMesh triangle;
+    private Triangle triangle;
 
-    public TriangleAdapter(TriangleMesh triangle)
+    /**
+     * This is the adapter class for the triangle
+     *
+     * @param triangle is the object
+     */
+    public TriangleAdapter(Triangle triangle)
     {
         this.triangle = triangle;
     }
 
     @Override
+    /**
+     * This returns the thickness value for the triangle
+     */
     public IShape setThickness(double value)
     {
-        return null;
+        return this;
     }
 
     @Override
+    /**
+     * This returns the set color value
+     */
     public IShape setColor(Color value)
     {
-        return null;
+        return this;
     }
 
     @Override
+    /**
+     * This returns the filled value for the triangle
+     */
     public IShape setFilled(boolean value)
     {
-        return null;
+        return this;
     }
 
     @Override
+    /**
+     * This returns the x coordinate
+     */
     public double getXCoordinate()
     {
-        return 0;
+        return triangle.getX();
     }
 
     @Override
+    /**
+     * This returns the y coodinate
+     */
     public double getYCoordinate()
     {
-        return 0;
+        return triangle.getY();
     }
 
     @Override
+    /**
+     * This gets the thickness
+     */
     public double getThickness()
     {
-        return 0;
+        return triangle.getThickness();
     }
 
     @Override
+    /**
+     * This gets the color for the triangle
+     */
     public Color getColor()
     {
-        return null;
+        return triangle.getColor();
     }
 
     @Override
+    /**
+     * This gets the filled value
+     */
     public boolean getFilled()
     {
         return false;
     }
 
     @Override
+    /**
+     *
+     */
     public void drawShape(GraphicsContext graphics)
     {
 
